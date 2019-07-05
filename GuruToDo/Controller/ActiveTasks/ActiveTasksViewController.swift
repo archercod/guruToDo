@@ -57,6 +57,8 @@ final class ActiveTasksViewController: UIViewController, StoryboardIdentifiable 
     
     // MARK: - Setups
     
+    /// Setup view
+    ///
     private func setupView() {
         self.title = Localized.activeTasks.string
         
@@ -64,6 +66,8 @@ final class ActiveTasksViewController: UIViewController, StoryboardIdentifiable 
         self.addAndEditTaskView.delegate = self
     }
     
+    /// Setup table view
+    ///
     private func setupTableView() {
         self.tableView.delegate = self
         self.tableView.dataSource = self
@@ -89,6 +93,9 @@ final class ActiveTasksViewController: UIViewController, StoryboardIdentifiable 
         }
     }
     
+    /// Show alert with message
+    ///
+    /// - Parameter message: String
     func showAlertWith(message: String) {
         let alert = UIAlertController(title: Localized.success.string, message: message, preferredStyle: .alert)
         self.present(alert, animated: true, completion: nil)
@@ -101,7 +108,6 @@ final class ActiveTasksViewController: UIViewController, StoryboardIdentifiable 
     @objc func accessoryButtonTapped(sender : UIButton) {
         sender.setImage(UIImage(named: "doneTaskButton"), for: .normal)
         
-        
         let activeTask = activeTasks[sender.tag]
         activeTask.isActive = false
         CoreDataManager.saveContext()
@@ -112,10 +118,14 @@ final class ActiveTasksViewController: UIViewController, StoryboardIdentifiable 
     
     // MARK: - Helpers
     
+    /// Load active tasks from core data
+    ///
     private func loadAcviteTasks() {
         activeTasks = fetchLocalData(active: true)
     }
     
+    /// Save data
+    ///
     private func saveData() {
         CoreDataManager.saveContext()
         self.loadAcviteTasks()
@@ -123,6 +133,9 @@ final class ActiveTasksViewController: UIViewController, StoryboardIdentifiable 
         self.showAlertWith(message: Localized.taskIsDone.string)
     }
     
+    /// Save task
+    ///
+    /// - Parameter completion: @escaping () -> Void
     private func saveTask(completion: @escaping () -> Void) {
         let task = Task(context: context)
         task.name = addAndEditTaskView.taskTextField.text!
@@ -180,6 +193,10 @@ final class ActiveTasksViewController: UIViewController, StoryboardIdentifiable 
     
     // MARK: - Fetch data
     
+    /// Fetch local data from core data with choosen state
+    ///
+    /// - Parameter active: Bool
+    /// - Returns: [Task]
     func fetchLocalData(active: Bool) -> [Task] {
         do {
             let formatRequest: NSFetchRequest<Task> = Task.fetchRequest()

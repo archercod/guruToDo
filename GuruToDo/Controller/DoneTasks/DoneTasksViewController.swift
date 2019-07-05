@@ -40,7 +40,7 @@ final class DoneTasksViewController: UIViewController, StoryboardIdentifiable {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
-        self.loadAcviteTasks()
+        self.loadDoneTasks()
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -51,10 +51,14 @@ final class DoneTasksViewController: UIViewController, StoryboardIdentifiable {
     
     // MARK: - Setups
     
+    /// Setup View
+    ///
     private func setupView() {
         self.title = Localized.doneTasks.string
     }
     
+    /// Setup table view
+    ///
     private func setupTableView() {
         self.tableView.delegate = self
         self.tableView.dataSource = self
@@ -66,15 +70,6 @@ final class DoneTasksViewController: UIViewController, StoryboardIdentifiable {
     
     // MARK: - Actions
     
-    func showAlertWith(message: String) {
-        let alert = UIAlertController(title: Localized.success.string, message: message, preferredStyle: .alert)
-        self.present(alert, animated: true, completion: nil)
-        let when = DispatchTime.now() + 0.5
-        DispatchQueue.main.asyncAfter(deadline: when){
-            alert.dismiss(animated: true, completion: nil)
-        }
-    }
-    
     @objc func accessoryButtonTapped(sender : UIButton) {
         sender.setImage(nil, for: .normal)
         
@@ -82,18 +77,24 @@ final class DoneTasksViewController: UIViewController, StoryboardIdentifiable {
         doneTask.isActive = true
         CoreDataManager.saveContext()
         
-        self.loadAcviteTasks()
+        self.loadDoneTasks()
         self.tableView.reloadData()
     }
     
     // MARK: - Helpers
     
-    private func loadAcviteTasks() {
+    /// Load done tasks
+    ///
+    private func loadDoneTasks() {
         doneTasks = fetchLocalData(active: false)
     }
     
     // MARK: - Fetch data
     
+    /// Fetch local data with choosen state
+    ///
+    /// - Parameter active: Bool
+    /// - Returns: [Task]
     func fetchLocalData(active: Bool) -> [Task] {
         do {
             let formatRequest: NSFetchRequest<Task> = Task.fetchRequest()
@@ -160,7 +161,7 @@ extension DoneTasksViewController: UITableViewDelegate {
             doneTask = doneTasks[indexPath.row]
             context.delete(doneTask)
             CoreDataManager.saveContext()
-            loadAcviteTasks()
+            loadDoneTasks()
             tableView.deleteRows(at: [indexPath], with: .fade)
         }
         

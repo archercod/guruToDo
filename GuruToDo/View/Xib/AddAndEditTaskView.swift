@@ -56,6 +56,8 @@ class AddAndEditTaskView: UIView, XIBCreatable {
     
     // MARK: - Setups
     
+    /// Setup view
+    ///
     private func setupView() {
         backgroundView.layer.cornerRadius = 24
         backgroundView.clipsToBounds = true
