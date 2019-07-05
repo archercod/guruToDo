@@ -101,6 +101,7 @@ final class ActiveTasksViewController: UIViewController, StoryboardIdentifiable 
     @objc func accessoryButtonTapped(sender : UIButton) {
         sender.setImage(UIImage(named: "doneTaskButton"), for: .normal)
         
+        
         let activeTask = activeTasks[sender.tag]
         activeTask.isActive = false
         CoreDataManager.saveContext()
