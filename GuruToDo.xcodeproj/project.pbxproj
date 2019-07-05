@@ -8,22 +8,62 @@
 
 /* Begin PBXBuildFile section */
 		EA169E8F22CE877900EB46AE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA169E8E22CE877900EB46AE /* AppDelegate.swift */; };
-		EA169E9122CE877900EB46AE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA169E9022CE877900EB46AE /* ViewController.swift */; };
 		EA169E9422CE877900EB46AE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EA169E9222CE877900EB46AE /* Main.storyboard */; };
 		EA169E9722CE877900EB46AE /* GuruToDo.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = EA169E9522CE877900EB46AE /* GuruToDo.xcdatamodeld */; };
 		EA169E9922CE877B00EB46AE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EA169E9822CE877B00EB46AE /* Assets.xcassets */; };
 		EA169E9C22CE877B00EB46AE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EA169E9A22CE877B00EB46AE /* LaunchScreen.storyboard */; };
+		EA169EB222CFE47300EB46AE /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA169EB122CFE47300EB46AE /* CoreDataManager.swift */; };
+		EA169EB822CFE77A00EB46AE /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA169EB722CFE77A00EB46AE /* MainTabBarController.swift */; };
+		EA169EC122CFE80000EB46AE /* MMTabBarAnimateController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA169EBD22CFE80000EB46AE /* MMTabBarAnimateController.swift */; };
+		EA169EC222CFE80000EB46AE /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA169EBE22CFE80000EB46AE /* UIViewExtension.swift */; };
+		EA169EC322CFE80000EB46AE /* AnimateItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA169EBF22CFE80000EB46AE /* AnimateItem.swift */; };
+		EA169EC422CFE80000EB46AE /* ImageAnimateLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA169EC022CFE80000EB46AE /* ImageAnimateLayer.swift */; };
+		EA169EC622CFE89500EB46AE /* StoryboardIdentifiable.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA169EC522CFE89500EB46AE /* StoryboardIdentifiable.swift */; };
+		EA169EC822CFE8EE00EB46AE /* Localized.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA169EC722CFE8EE00EB46AE /* Localized.swift */; };
+		EA169ECA22CFEAD600EB46AE /* ActiveTasks.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EA169EC922CFEAD600EB46AE /* ActiveTasks.storyboard */; };
+		EA169ECC22CFEAE600EB46AE /* DoneTasks.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EA169ECB22CFEAE600EB46AE /* DoneTasks.storyboard */; };
+		EA169ECE22CFEB8300EB46AE /* ActiveTasksNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA169ECD22CFEB8300EB46AE /* ActiveTasksNavigationController.swift */; };
+		EA169ED022CFEB9100EB46AE /* DoneTasksNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA169ECF22CFEB9100EB46AE /* DoneTasksNavigationController.swift */; };
+		EA169ED322CFEBD600EB46AE /* ActiveTasksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA169ED222CFEBD600EB46AE /* ActiveTasksViewController.swift */; };
+		EA169ED522CFEBE000EB46AE /* DoneTasksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA169ED422CFEBE000EB46AE /* DoneTasksViewController.swift */; };
+		EA169ED722CFEDE400EB46AE /* UIStoryboard+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA169ED622CFEDE400EB46AE /* UIStoryboard+Extension.swift */; };
+		EA169EDD22CFF3B700EB46AE /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA169EDC22CFF3B700EB46AE /* Config.swift */; };
+		EA169EDF22CFFA1100EB46AE /* AddAndEditTaskView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA169EDE22CFFA1100EB46AE /* AddAndEditTaskView.swift */; };
+		EA169EE122CFFA1D00EB46AE /* AddAndEditTaskView.xib in Resources */ = {isa = PBXBuildFile; fileRef = EA169EE022CFFA1D00EB46AE /* AddAndEditTaskView.xib */; };
+		EA169EE322CFFA7A00EB46AE /* UnderlineTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA169EE222CFFA7900EB46AE /* UnderlineTextField.swift */; };
+		EA169EE622CFFC1900EB46AE /* XibCreatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA169EE522CFFC1900EB46AE /* XibCreatable.swift */; };
+		EA169EE822CFFC3300EB46AE /* XibIdentifiable.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA169EE722CFFC3300EB46AE /* XibIdentifiable.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		EA169E8B22CE877900EB46AE /* GuruToDo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GuruToDo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA169E8E22CE877900EB46AE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		EA169E9022CE877900EB46AE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		EA169E9322CE877900EB46AE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		EA169E9622CE877900EB46AE /* GuruToDo.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = GuruToDo.xcdatamodel; sourceTree = "<group>"; };
 		EA169E9822CE877B00EB46AE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EA169E9B22CE877B00EB46AE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EA169E9D22CE877B00EB46AE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EA169EB122CFE47300EB46AE /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
+		EA169EB722CFE77A00EB46AE /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
+		EA169EBD22CFE80000EB46AE /* MMTabBarAnimateController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MMTabBarAnimateController.swift; sourceTree = "<group>"; };
+		EA169EBE22CFE80000EB46AE /* UIViewExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewExtension.swift; sourceTree = "<group>"; };
+		EA169EBF22CFE80000EB46AE /* AnimateItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimateItem.swift; sourceTree = "<group>"; };
+		EA169EC022CFE80000EB46AE /* ImageAnimateLayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageAnimateLayer.swift; sourceTree = "<group>"; };
+		EA169EC522CFE89500EB46AE /* StoryboardIdentifiable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryboardIdentifiable.swift; sourceTree = "<group>"; };
+		EA169EC722CFE8EE00EB46AE /* Localized.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Localized.swift; sourceTree = "<group>"; };
+		EA169EC922CFEAD600EB46AE /* ActiveTasks.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ActiveTasks.storyboard; sourceTree = "<group>"; };
+		EA169ECB22CFEAE600EB46AE /* DoneTasks.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DoneTasks.storyboard; sourceTree = "<group>"; };
+		EA169ECD22CFEB8300EB46AE /* ActiveTasksNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActiveTasksNavigationController.swift; sourceTree = "<group>"; };
+		EA169ECF22CFEB9100EB46AE /* DoneTasksNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoneTasksNavigationController.swift; sourceTree = "<group>"; };
+		EA169ED222CFEBD600EB46AE /* ActiveTasksViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActiveTasksViewController.swift; sourceTree = "<group>"; };
+		EA169ED422CFEBE000EB46AE /* DoneTasksViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoneTasksViewController.swift; sourceTree = "<group>"; };
+		EA169ED622CFEDE400EB46AE /* UIStoryboard+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIStoryboard+Extension.swift"; sourceTree = "<group>"; };
+		EA169EDC22CFF3B700EB46AE /* Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
+		EA169EDE22CFFA1100EB46AE /* AddAndEditTaskView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddAndEditTaskView.swift; sourceTree = "<group>"; };
+		EA169EE022CFFA1D00EB46AE /* AddAndEditTaskView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddAndEditTaskView.xib; sourceTree = "<group>"; };
+		EA169EE222CFFA7900EB46AE /* UnderlineTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UnderlineTextField.swift; sourceTree = "<group>"; };
+		EA169EE522CFFC1900EB46AE /* XibCreatable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XibCreatable.swift; sourceTree = "<group>"; };
+		EA169EE722CFFC3300EB46AE /* XibIdentifiable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XibIdentifiable.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +96,147 @@
 		EA169E8D22CE877900EB46AE /* GuruToDo */ = {
 			isa = PBXGroup;
 			children = (
+				EA169EBA22CFE7DF00EB46AE /* Libs */,
+				EA169EB922CFE7CE00EB46AE /* Extension */,
 				EA169E8E22CE877900EB46AE /* AppDelegate.swift */,
-				EA169E9022CE877900EB46AE /* ViewController.swift */,
-				EA169E9222CE877900EB46AE /* Main.storyboard */,
-				EA169E9822CE877B00EB46AE /* Assets.xcassets */,
-				EA169E9A22CE877B00EB46AE /* LaunchScreen.storyboard */,
+				EA169EAA22CE88FC00EB46AE /* Utilities */,
+				EA169EA622CE88AF00EB46AE /* Resources */,
+				EA169EA522CE88AA00EB46AE /* Model */,
+				EA169EA422CE88A600EB46AE /* View */,
+				EA169EA322CE889F00EB46AE /* Controller */,
 				EA169E9D22CE877B00EB46AE /* Info.plist */,
-				EA169E9522CE877900EB46AE /* GuruToDo.xcdatamodeld */,
 			);
 			path = GuruToDo;
+			sourceTree = "<group>";
+		};
+		EA169EA322CE889F00EB46AE /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				EA169ED122CFEBC900EB46AE /* DoneTasks */,
+				EA169EB622CFE71400EB46AE /* ActiveTasks */,
+				EA169EB522CFE70F00EB46AE /* Main */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		EA169EA422CE88A600EB46AE /* View */ = {
+			isa = PBXGroup;
+			children = (
+				EA169EA822CE88BF00EB46AE /* Xib */,
+				EA169EA722CE88B800EB46AE /* Storyboards */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		EA169EA522CE88AA00EB46AE /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				EA169E9522CE877900EB46AE /* GuruToDo.xcdatamodeld */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		EA169EA622CE88AF00EB46AE /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				EA169E9822CE877B00EB46AE /* Assets.xcassets */,
+				EA169EC722CFE8EE00EB46AE /* Localized.swift */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		EA169EA722CE88B800EB46AE /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				EA169E9222CE877900EB46AE /* Main.storyboard */,
+				EA169E9A22CE877B00EB46AE /* LaunchScreen.storyboard */,
+				EA169EC922CFEAD600EB46AE /* ActiveTasks.storyboard */,
+				EA169ECB22CFEAE600EB46AE /* DoneTasks.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		EA169EA822CE88BF00EB46AE /* Xib */ = {
+			isa = PBXGroup;
+			children = (
+				EA169EDE22CFFA1100EB46AE /* AddAndEditTaskView.swift */,
+				EA169EE022CFFA1D00EB46AE /* AddAndEditTaskView.xib */,
+			);
+			path = Xib;
+			sourceTree = "<group>";
+		};
+		EA169EAA22CE88FC00EB46AE /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				EA169EB122CFE47300EB46AE /* CoreDataManager.swift */,
+				EA169EC522CFE89500EB46AE /* StoryboardIdentifiable.swift */,
+				EA169EDC22CFF3B700EB46AE /* Config.swift */,
+				EA169EE522CFFC1900EB46AE /* XibCreatable.swift */,
+				EA169EE722CFFC3300EB46AE /* XibIdentifiable.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		EA169EB522CFE70F00EB46AE /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				EA169EB722CFE77A00EB46AE /* MainTabBarController.swift */,
+				EA169ECD22CFEB8300EB46AE /* ActiveTasksNavigationController.swift */,
+				EA169ECF22CFEB9100EB46AE /* DoneTasksNavigationController.swift */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		EA169EB622CFE71400EB46AE /* ActiveTasks */ = {
+			isa = PBXGroup;
+			children = (
+				EA169ED222CFEBD600EB46AE /* ActiveTasksViewController.swift */,
+			);
+			path = ActiveTasks;
+			sourceTree = "<group>";
+		};
+		EA169EB922CFE7CE00EB46AE /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				EA169ED622CFEDE400EB46AE /* UIStoryboard+Extension.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		EA169EBA22CFE7DF00EB46AE /* Libs */ = {
+			isa = PBXGroup;
+			children = (
+				EA169EE222CFFA7900EB46AE /* UnderlineTextField.swift */,
+				EA169EBB22CFE80000EB46AE /* MMTabBarAnimation */,
+			);
+			path = Libs;
+			sourceTree = "<group>";
+		};
+		EA169EBB22CFE80000EB46AE /* MMTabBarAnimation */ = {
+			isa = PBXGroup;
+			children = (
+				EA169EBC22CFE80000EB46AE /* Classes */,
+			);
+			path = MMTabBarAnimation;
+			sourceTree = "<group>";
+		};
+		EA169EBC22CFE80000EB46AE /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				EA169EBD22CFE80000EB46AE /* MMTabBarAnimateController.swift */,
+				EA169EBE22CFE80000EB46AE /* UIViewExtension.swift */,
+				EA169EBF22CFE80000EB46AE /* AnimateItem.swift */,
+				EA169EC022CFE80000EB46AE /* ImageAnimateLayer.swift */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		EA169ED122CFEBC900EB46AE /* DoneTasks */ = {
+			isa = PBXGroup;
+			children = (
+				EA169ED422CFEBE000EB46AE /* DoneTasksViewController.swift */,
+			);
+			path = DoneTasks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -126,8 +298,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				EA169E9C22CE877B00EB46AE /* LaunchScreen.storyboard in Resources */,
+				EA169ECC22CFEAE600EB46AE /* DoneTasks.storyboard in Resources */,
 				EA169E9922CE877B00EB46AE /* Assets.xcassets in Resources */,
+				EA169EE122CFFA1D00EB46AE /* AddAndEditTaskView.xib in Resources */,
 				EA169E9422CE877900EB46AE /* Main.storyboard in Resources */,
+				EA169ECA22CFEAD600EB46AE /* ActiveTasks.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -138,9 +313,26 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EA169EE622CFFC1900EB46AE /* XibCreatable.swift in Sources */,
+				EA169EC222CFE80000EB46AE /* UIViewExtension.swift in Sources */,
+				EA169EC422CFE80000EB46AE /* ImageAnimateLayer.swift in Sources */,
 				EA169E9722CE877900EB46AE /* GuruToDo.xcdatamodeld in Sources */,
-				EA169E9122CE877900EB46AE /* ViewController.swift in Sources */,
+				EA169EC122CFE80000EB46AE /* MMTabBarAnimateController.swift in Sources */,
+				EA169ECE22CFEB8300EB46AE /* ActiveTasksNavigationController.swift in Sources */,
+				EA169ED522CFEBE000EB46AE /* DoneTasksViewController.swift in Sources */,
+				EA169EB222CFE47300EB46AE /* CoreDataManager.swift in Sources */,
+				EA169EC822CFE8EE00EB46AE /* Localized.swift in Sources */,
+				EA169EDF22CFFA1100EB46AE /* AddAndEditTaskView.swift in Sources */,
+				EA169EC622CFE89500EB46AE /* StoryboardIdentifiable.swift in Sources */,
+				EA169EE822CFFC3300EB46AE /* XibIdentifiable.swift in Sources */,
+				EA169EB822CFE77A00EB46AE /* MainTabBarController.swift in Sources */,
 				EA169E8F22CE877900EB46AE /* AppDelegate.swift in Sources */,
+				EA169ED022CFEB9100EB46AE /* DoneTasksNavigationController.swift in Sources */,
+				EA169EC322CFE80000EB46AE /* AnimateItem.swift in Sources */,
+				EA169EE322CFFA7A00EB46AE /* UnderlineTextField.swift in Sources */,
+				EA169EDD22CFF3B700EB46AE /* Config.swift in Sources */,
+				EA169ED322CFEBD600EB46AE /* ActiveTasksViewController.swift in Sources */,
+				EA169ED722CFEDE400EB46AE /* UIStoryboard+Extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

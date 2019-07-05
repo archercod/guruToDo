@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AddAndEditTaskView" customModule="GuruToDo" customModuleProvider="target">
+            <connections>
+                <outlet property="backgroundView" destination="VKn-BQ-V9e" id="J8h-Uu-sO6"/>
+                <outlet property="doneButton" destination="vaq-Sc-cmj" id="kHr-Kw-4Wt"/>
+                <outlet property="taskTextField" destination="p4A-RP-Bcm" id="bUy-fT-0Bm"/>
+                <outlet property="titleLabel" destination="OJd-jj-WIP" id="G34-do-enE"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VKn-BQ-V9e">
+                    <rect key="frame" x="30" y="109" width="354" height="300"/>
+                    <subviews>
+                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="p4A-RP-Bcm" customClass="UnderlineTextField" customModule="GuruToDo" customModuleProvider="target">
+                            <rect key="frame" x="20" y="81" width="314" height="45"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="45" id="kc3-dk-bW3"/>
+                            </constraints>
+                            <nil key="textColor"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <textInputTraits key="textInputTraits" keyboardAppearance="alert" returnKeyType="done" enablesReturnKeyAutomatically="YES" textContentType="name"/>
+                        </textField>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OJd-jj-WIP">
+                            <rect key="frame" x="20" y="30" width="314" height="21"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vaq-Sc-cmj">
+                            <rect key="frame" x="50" y="230" width="254" height="40"/>
+                            <color key="backgroundColor" red="0.27053481340000002" green="0.51119178529999998" blue="0.95690673589999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="40" id="2qX-Rp-lhC"/>
+                            </constraints>
+                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <state key="normal" title="Button"/>
+                            <connections>
+                                <action selector="doneButtonDidTapped:" destination="-1" eventType="touchUpInside" id="2XT-Y6-GpW"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstItem="OJd-jj-WIP" firstAttribute="top" secondItem="VKn-BQ-V9e" secondAttribute="top" constant="30" id="4uw-KE-8DN"/>
+                        <constraint firstItem="p4A-RP-Bcm" firstAttribute="leading" secondItem="VKn-BQ-V9e" secondAttribute="leading" constant="20" id="9QP-ci-wF1"/>
+                        <constraint firstAttribute="trailing" secondItem="vaq-Sc-cmj" secondAttribute="trailing" constant="50" id="9SK-7g-CNn"/>
+                        <constraint firstAttribute="trailing" secondItem="OJd-jj-WIP" secondAttribute="trailing" constant="20" id="CG8-ud-ClC"/>
+                        <constraint firstAttribute="bottom" secondItem="vaq-Sc-cmj" secondAttribute="bottom" constant="30" id="DQa-NM-KBJ"/>
+                        <constraint firstItem="p4A-RP-Bcm" firstAttribute="top" secondItem="OJd-jj-WIP" secondAttribute="bottom" constant="30" id="Ecf-9r-D1V"/>
+                        <constraint firstItem="OJd-jj-WIP" firstAttribute="leading" secondItem="VKn-BQ-V9e" secondAttribute="leading" constant="20" id="Nss-6r-GuV"/>
+                        <constraint firstAttribute="trailing" secondItem="p4A-RP-Bcm" secondAttribute="trailing" constant="20" id="oBI-SL-Ypb"/>
+                        <constraint firstItem="vaq-Sc-cmj" firstAttribute="leading" secondItem="VKn-BQ-V9e" secondAttribute="leading" constant="50" id="q9W-dc-Y1b"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="VKn-BQ-V9e" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="1C2-2K-tve"/>
+                <constraint firstItem="VKn-BQ-V9e" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="w2X-d2-dtd"/>
+                <constraint firstAttribute="trailing" secondItem="VKn-BQ-V9e" secondAttribute="trailing" id="yGk-nj-NLp"/>
+                <constraint firstAttribute="bottom" secondItem="VKn-BQ-V9e" secondAttribute="bottom" id="zXK-Xk-51s"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <point key="canvasLocation" x="124.6376811594203" y="-16.071428571428569"/>
+        </view>
+    </objects>
+</document>

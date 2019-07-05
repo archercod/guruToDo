@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Sf4-oQ-ebz">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Active Tasks View Controller-->
+        <scene sceneID="n1N-bi-Kee">
+            <objects>
+                <viewController storyboardIdentifier="ActiveTasksViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="TUH-lz-24Q" customClass="ActiveTasksViewController" customModule="GuruToDo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="JQw-pM-Fs5">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="0aI-Cu-xkg">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ActiveTaskCell" id="Avq-Wb-56O">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Avq-Wb-56O" id="zms-wk-jXT">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                            <view hidden="YES" clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Jkq-Ie-ILF" customClass="AddAndEditTaskView" customModule="GuruToDo" customModuleProvider="target">
+                                <rect key="frame" x="15" y="148" width="384" height="320"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="320" id="mJz-pI-8oy"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="7WV-Qc-d95" firstAttribute="trailing" secondItem="Jkq-Ie-ILF" secondAttribute="trailing" constant="15" id="8OK-Wf-5IF"/>
+                            <constraint firstItem="0aI-Cu-xkg" firstAttribute="top" secondItem="JQw-pM-Fs5" secondAttribute="top" id="Bhb-AK-ieL"/>
+                            <constraint firstItem="0aI-Cu-xkg" firstAttribute="leading" secondItem="7WV-Qc-d95" secondAttribute="leading" id="F9P-J2-N20"/>
+                            <constraint firstItem="Jkq-Ie-ILF" firstAttribute="top" secondItem="7WV-Qc-d95" secondAttribute="top" constant="60" id="G0f-qk-f04"/>
+                            <constraint firstItem="Jkq-Ie-ILF" firstAttribute="leading" secondItem="7WV-Qc-d95" secondAttribute="leading" constant="15" id="bj8-82-YAN"/>
+                            <constraint firstAttribute="bottom" secondItem="0aI-Cu-xkg" secondAttribute="bottom" id="r1P-uZ-c4N"/>
+                            <constraint firstItem="0aI-Cu-xkg" firstAttribute="trailing" secondItem="7WV-Qc-d95" secondAttribute="trailing" id="vtb-nR-4x0"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="7WV-Qc-d95"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="osb-Aw-aft">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="GVi-w9-RsV">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <connections>
+                                <action selector="addTaskButtonDidTapped:" destination="TUH-lz-24Q" id="dAz-Cb-Olk"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="addAndEditTaskView" destination="Jkq-Ie-ILF" id="7M7-cr-4bC"/>
+                        <outlet property="tableView" destination="0aI-Cu-xkg" id="Nze-Pq-t1f"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tdp-uj-uH6" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1102.8985507246377" y="181.47321428571428"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="itb-5p-Nq8">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Sf4-oQ-ebz" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Vjq-jQ-5hl">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="TUH-lz-24Q" kind="relationship" relationship="rootViewController" id="swq-4i-5Iq"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8Kf-Hq-0KJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="192.75362318840581" y="181.47321428571428"/>
+        </scene>
+    </scenes>
+</document>
