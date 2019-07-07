@@ -30,16 +30,6 @@ final class MainTabBarController: MMTabBarAnimateController, StoryboardIdentifia
         self.addShadow()
     }
     
-    override func viewWillLayoutSubviews() {
-        var newTabBarFrame = tabBar.frame
-        
-        let newTabBarHeight: CGFloat = 100
-        newTabBarFrame.size.height = newTabBarHeight
-        newTabBarFrame.origin.y = self.view.frame.size.height - newTabBarHeight
-        
-        tabBar.frame = newTabBarFrame
-    }
-    
     deinit {
         print("\(type(of: self)) deinited.")
     }
@@ -55,8 +45,8 @@ final class MainTabBarController: MMTabBarAnimateController, StoryboardIdentifia
     /// Set tabs
     ///
     private func setTabs() {
-        self.tabBar.items?[TabItem.active.rawValue].title = Localized.active.string
-        self.tabBar.items?[TabItem.done.rawValue].title = Localized.done.string
+        self.tabBar.items?[TabItem.active.rawValue].title = Localized.activeTasks.string
+        self.tabBar.items?[TabItem.done.rawValue].title = Localized.doneTasks.string
         
         self.tabBar.items?[TabItem.active.rawValue].image = UIImage(named: "activeTasksIcon")
         self.tabBar.items?[TabItem.active.rawValue].selectedImage = UIImage(named: "activeTasksIcon")

@@ -114,7 +114,23 @@ final class DoneTasksViewController: UIViewController, StoryboardIdentifiable {
 extension DoneTasksViewController: UITableViewDataSource {
     
     func numberOfSections(in tableView: UITableView) -> Int {
-        return 1
+        var numOfSections: Int = 0
+        
+        if !doneTasks.isEmpty {
+            tableView.separatorStyle = .singleLine
+            numOfSections = 1
+            tableView.backgroundView = nil
+        } else {
+            let noDataLabel: UILabel = UILabel(frame: CGRect(x: 0, y: 0, width: tableView.bounds.size.width, height: tableView.bounds.size.height))
+            noDataLabel.text = Localized.emptyDoneTasksMessage.string
+            noDataLabel.textColor = UIColor.lightGray
+            noDataLabel.textAlignment = .center
+            noDataLabel.numberOfLines = 0
+            tableView.backgroundView = noDataLabel
+            tableView.separatorStyle = .none
+        }
+        
+        return numOfSections
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

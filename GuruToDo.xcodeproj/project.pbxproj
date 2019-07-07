@@ -34,6 +34,7 @@
 		EA169EE622CFFC1900EB46AE /* XibCreatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA169EE522CFFC1900EB46AE /* XibCreatable.swift */; };
 		EA169EE822CFFC3300EB46AE /* XibIdentifiable.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA169EE722CFFC3300EB46AE /* XibIdentifiable.swift */; };
 		EA169EEA22D1D68000EB46AE /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA169EE922D1D68000EB46AE /* UIColor+Extension.swift */; };
+		EA169EEC22D1DCFA00EB46AE /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA169EEB22D1DCFA00EB46AE /* UIViewController+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -66,6 +67,7 @@
 		EA169EE522CFFC1900EB46AE /* XibCreatable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XibCreatable.swift; sourceTree = "<group>"; };
 		EA169EE722CFFC3300EB46AE /* XibIdentifiable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XibIdentifiable.swift; sourceTree = "<group>"; };
 		EA169EE922D1D68000EB46AE /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
+		EA169EEB22D1DCFA00EB46AE /* UIViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -202,6 +204,7 @@
 			children = (
 				EA169ED622CFEDE400EB46AE /* UIStoryboard+Extension.swift */,
 				EA169EE922D1D68000EB46AE /* UIColor+Extension.swift */,
+				EA169EEB22D1DCFA00EB46AE /* UIViewController+Extension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -328,6 +331,7 @@
 				EA169EC822CFE8EE00EB46AE /* Localized.swift in Sources */,
 				EA169EDF22CFFA1100EB46AE /* AddAndEditTaskView.swift in Sources */,
 				EA169EC622CFE89500EB46AE /* StoryboardIdentifiable.swift in Sources */,
+				EA169EEC22D1DCFA00EB46AE /* UIViewController+Extension.swift in Sources */,
 				EA169EE822CFFC3300EB46AE /* XibIdentifiable.swift in Sources */,
 				EA169EB822CFE77A00EB46AE /* MainTabBarController.swift in Sources */,
 				EA169E8F22CE877900EB46AE /* AppDelegate.swift in Sources */,

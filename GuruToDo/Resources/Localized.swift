@@ -18,6 +18,8 @@ public enum Localized {
     case done
     case doneTasks
     case editTask
+    case emptyActiveTasksMessage
+    case emptyDoneTasksMessage
     case errorEmptyTextFieldMessage
     case loadingDataError
     case success
@@ -39,6 +41,10 @@ public enum Localized {
                 return NSLocalizedString("Done tasks", comment: "")
             case .editTask:
                 return NSLocalizedString("Edit task", comment: "")
+            case .emptyActiveTasksMessage:
+                return NSLocalizedString("Improve your productive!\n To add new task, use '+' buttton", comment: "")
+            case .emptyDoneTasksMessage:
+                return NSLocalizedString("You don't have any done tasks", comment: "")
             case .errorEmptyTextFieldMessage:
                 return NSLocalizedString("Please fill the task name", comment: "")
             case .loadingDataError:

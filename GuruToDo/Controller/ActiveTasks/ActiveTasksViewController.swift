@@ -41,6 +41,8 @@ final class ActiveTasksViewController: UIViewController, StoryboardIdentifiable 
         
         self.setupView()
         self.setupTableView()
+        
+        self.hideKeyboardWhenTappedAround()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -217,7 +219,23 @@ final class ActiveTasksViewController: UIViewController, StoryboardIdentifiable 
 extension ActiveTasksViewController: UITableViewDataSource {
     
     func numberOfSections(in tableView: UITableView) -> Int {
-        return 1
+        var numOfSections: Int = 0
+        
+        if !activeTasks.isEmpty {
+            tableView.separatorStyle = .singleLine
+            numOfSections = 1
+            tableView.backgroundView = nil
+        } else {
+            let noDataLabel: UILabel = UILabel(frame: CGRect(x: 0, y: 0, width: tableView.bounds.size.width, height: tableView.bounds.size.height))
+            noDataLabel.text = Localized.emptyActiveTasksMessage.string
+            noDataLabel.textColor = UIColor.lightGray
+            noDataLabel.textAlignment = .center
+            noDataLabel.numberOfLines = 0
+            tableView.backgroundView = noDataLabel
+            tableView.separatorStyle = .none
+        }
+        
+        return numOfSections
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
