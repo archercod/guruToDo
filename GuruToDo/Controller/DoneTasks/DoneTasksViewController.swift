@@ -71,14 +71,16 @@ final class DoneTasksViewController: UIViewController, StoryboardIdentifiable {
     // MARK: - Actions
     
     @objc func accessoryButtonTapped(sender : UIButton) {
-        sender.setImage(nil, for: .normal)
-        
-        let doneTask = doneTasks[sender.tag]
-        doneTask.isActive = true
-        CoreDataManager.saveContext()
-        
-        self.loadDoneTasks()
-        self.tableView.reloadData()
+        UIView.animate(withDuration: 0.5, animations: {
+            sender.setImage(UIImage(named: ""), for: .normal)
+        }) { (success) in
+            let doneTask = self.doneTasks[sender.tag]
+            doneTask.isActive = true
+            CoreDataManager.saveContext()
+            
+            self.loadDoneTasks()
+            self.tableView.reloadData()
+        }
     }
     
     // MARK: - Helpers

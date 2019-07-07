@@ -29,6 +29,8 @@ final class ActiveTasksViewController: UIViewController, StoryboardIdentifiable 
     var addTaskViewIsHidden: Bool = true
     var isInEditTaskMode: Bool = false
     
+    var selectedIndexPath: IndexPath?
+    
     // MARK: - Outlets
     
     @IBOutlet fileprivate(set) weak var tableView: UITableView!
@@ -109,14 +111,16 @@ final class ActiveTasksViewController: UIViewController, StoryboardIdentifiable 
     }
     
     @objc func accessoryButtonTapped(sender : UIButton) {
-        sender.setImage(UIImage(named: "doneTaskButton"), for: .normal)
-        
-        let activeTask = activeTasks[sender.tag]
-        activeTask.isActive = false
-        CoreDataManager.saveContext()
-        
-        self.loadAcviteTasks()
-        self.tableView.reloadData()
+        UIView.animate(withDuration: 1.0, animations: {
+            sender.setImage(UIImage(named: "doneTaskButton"), for: .normal)
+        }) { (success) in
+            let activeTask = self.activeTasks[sender.tag]
+            activeTask.isActive = false
+            CoreDataManager.saveContext()
+            
+            self.loadAcviteTasks()
+            self.tableView.reloadData()
+        }
     }
     
     // MARK: - Helpers
@@ -141,10 +145,18 @@ final class ActiveTasksViewController: UIViewController, StoryboardIdentifiable 
     /// - Parameter completion: @escaping () -> Void
     private func saveTask(completion: @escaping () -> Void) {
         let task = Task(context: context)
-        task.name = addAndEditTaskView.taskTextField.text!
-        task.isActive = true
-        CoreDataManager.saveContext()
-        completion()
+        
+        if selectedIndexPath != nil {
+            self.activeTasks[selectedIndexPath?.row ?? 0].setValue(addAndEditTaskView.taskTextField.text!, forKey: "name")
+            CoreDataManager.saveContext()
+            completion()
+        } else {
+            task.name = addAndEditTaskView.taskTextField.text!
+            task.isActive = true
+            CoreDataManager.saveContext()
+            completion()
+        }
+
     }
     
     // MARK: - Add task popup
@@ -292,6 +304,7 @@ extension ActiveTasksViewController: UITableViewDelegate {
         if let cell = tableView.cellForRow(at: indexPath) {
             if cell.isSelected {
                 self.isInEditTaskMode = true
+                self.selectedIndexPath = indexPath
                 let activeTask = self.activeTasks[indexPath.row]
                 self.showAddAndEditTaskView {
                     self.addAndEditTaskView.taskTextField.text = activeTask.name
@@ -326,6 +339,7 @@ extension ActiveTasksViewController: AddAndEditTaskViewDelegate {
                 self.hideAddAndEditTaskView {
                     self.addAndEditTaskView.taskTextField.text = ""
                     self.loadAcviteTasks()
+                    self.selectedIndexPath = nil
                     self.tableView.reloadData()
                 }
             }
