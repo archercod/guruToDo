@@ -294,7 +294,12 @@ extension ActiveTasksViewController: UITableViewDelegate {
             context.delete(activeTask)
             CoreDataManager.saveContext()
             loadAcviteTasks()
-            tableView.deleteRows(at: [indexPath], with: .fade)
+            
+            if activeTasks.count > 0 {
+                tableView.deleteRows(at: [indexPath], with: .fade)
+            } else {
+                tableView.deleteSections(IndexSet(integer: 0), with: .fade)
+            }
         }
         
         tableView.reloadData()

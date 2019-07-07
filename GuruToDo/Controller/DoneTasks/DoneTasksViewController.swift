@@ -180,7 +180,12 @@ extension DoneTasksViewController: UITableViewDelegate {
             context.delete(doneTask)
             CoreDataManager.saveContext()
             loadDoneTasks()
-            tableView.deleteRows(at: [indexPath], with: .fade)
+            
+            if doneTasks.count > 0 {
+                tableView.deleteRows(at: [indexPath], with: .fade)
+            } else {
+                tableView.deleteSections(IndexSet(integer: 0), with: .fade)
+            }
         }
         
         tableView.reloadData()

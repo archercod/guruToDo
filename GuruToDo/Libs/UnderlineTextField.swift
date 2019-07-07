@@ -88,7 +88,7 @@ class UnderlineTextField: UITextField {
     
     @objc func didStartEditing() {
         UIView.animate(withDuration: 0.3) {
-            self.underLineView.backgroundColor = UIColor.blue
+            self.underLineView.backgroundColor = UIColor.MainColors.Blue
         }
         isActive = true
         updateState()
@@ -131,8 +131,8 @@ class UnderlineTextField: UITextField {
     /// Back to default state
     ///
     func unmarkError() {
-        underLineView.backgroundColor = UIColor.blue
-        placeholderColor = UIColor.blue
+        underLineView.backgroundColor = UIColor.MainColors.Blue
+        placeholderColor = UIColor.MainColors.Blue
         tintColor = UIColor.darkGray
     }
     
