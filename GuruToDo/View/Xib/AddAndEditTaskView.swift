@@ -24,6 +24,7 @@ class AddAndEditTaskView: UIView, XIBCreatable {
     @IBOutlet fileprivate(set) weak var backgroundView: UIView!
     @IBOutlet fileprivate(set) weak var titleLabel: UILabel!
     @IBOutlet fileprivate(set) weak var taskTextField: UnderlineTextField!
+    @IBOutlet fileprivate(set) weak var errorLabel: UILabel!
     @IBOutlet fileprivate(set) weak var doneButton: UIButton!
     
     // MARK: - Initializations

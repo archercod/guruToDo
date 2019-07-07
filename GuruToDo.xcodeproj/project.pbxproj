@@ -33,6 +33,7 @@
 		EA169EE322CFFA7A00EB46AE /* UnderlineTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA169EE222CFFA7900EB46AE /* UnderlineTextField.swift */; };
 		EA169EE622CFFC1900EB46AE /* XibCreatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA169EE522CFFC1900EB46AE /* XibCreatable.swift */; };
 		EA169EE822CFFC3300EB46AE /* XibIdentifiable.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA169EE722CFFC3300EB46AE /* XibIdentifiable.swift */; };
+		EA169EEA22D1D68000EB46AE /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA169EE922D1D68000EB46AE /* UIColor+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -64,6 +65,7 @@
 		EA169EE222CFFA7900EB46AE /* UnderlineTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UnderlineTextField.swift; sourceTree = "<group>"; };
 		EA169EE522CFFC1900EB46AE /* XibCreatable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XibCreatable.swift; sourceTree = "<group>"; };
 		EA169EE722CFFC3300EB46AE /* XibIdentifiable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XibIdentifiable.swift; sourceTree = "<group>"; };
+		EA169EE922D1D68000EB46AE /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -199,6 +201,7 @@
 			isa = PBXGroup;
 			children = (
 				EA169ED622CFEDE400EB46AE /* UIStoryboard+Extension.swift */,
+				EA169EE922D1D68000EB46AE /* UIColor+Extension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -313,6 +316,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EA169EEA22D1D68000EB46AE /* UIColor+Extension.swift in Sources */,
 				EA169EE622CFFC1900EB46AE /* XibCreatable.swift in Sources */,
 				EA169EC222CFE80000EB46AE /* UIViewExtension.swift in Sources */,
 				EA169EC422CFE80000EB46AE /* ImageAnimateLayer.swift in Sources */,

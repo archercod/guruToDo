@@ -33,10 +33,10 @@
                                 </prototypes>
                             </tableView>
                             <view hidden="YES" clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Jkq-Ie-ILF" customClass="AddAndEditTaskView" customModule="GuruToDo" customModuleProvider="target">
-                                <rect key="frame" x="15" y="148" width="384" height="320"/>
+                                <rect key="frame" x="15" y="148" width="384" height="250"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="320" id="mJz-pI-8oy"/>
+                                    <constraint firstAttribute="height" constant="250" id="mJz-pI-8oy"/>
                                 </constraints>
                             </view>
                         </subviews>

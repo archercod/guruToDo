@@ -64,6 +64,7 @@ final class ActiveTasksViewController: UIViewController, StoryboardIdentifiable 
         
         self.addAndEditTaskView.alpha = 0
         self.addAndEditTaskView.delegate = self
+        self.addAndEditTaskView.taskTextField.delegate = self
     }
     
     /// Setup table view
@@ -235,7 +236,7 @@ extension ActiveTasksViewController: UITableViewDataSource {
         checkMarkButton.frame = CGRect(x: 0, y: 0, width: 30, height: 30)
         checkMarkButton.addTarget(self, action: #selector(accessoryButtonTapped(sender:)), for: .touchUpInside)
         checkMarkButton.layer.borderWidth = 1.0
-        checkMarkButton.layer.borderColor = UIColor.blue.cgColor
+        checkMarkButton.layer.borderColor = UIColor.MainColors.Blue.cgColor
         checkMarkButton.layer.masksToBounds = true
         checkMarkButton.contentMode = .scaleAspectFit
         checkMarkButton.tag = indexPath.row
@@ -285,18 +286,36 @@ extension ActiveTasksViewController: UITableViewDelegate {
     
 }
 
+// MARK: - UITextFieldDelegate
+
+extension ActiveTasksViewController: UITextFieldDelegate {
+    
+    func textFieldShouldBeginEditing(_ textField: UITextField) -> Bool {
+        self.addAndEditTaskView.taskTextField.unmarkError()
+        self.addAndEditTaskView.errorLabel.text = nil
+        return true
+    }
+    
+}
+
 // MARK: - AddAndEditTaskViewDelegate
 
 extension ActiveTasksViewController: AddAndEditTaskViewDelegate {
     
     func doneButtonDidTapped(_ sender: UIButton) {
-        self.saveTask {
-            self.hideAddAndEditTaskView {
-                self.addAndEditTaskView.taskTextField.text = ""
-                self.loadAcviteTasks()
-                self.tableView.reloadData()
+        if self.addAndEditTaskView.taskTextField.text?.count ?? 0 > 0 {
+            self.saveTask {
+                self.hideAddAndEditTaskView {
+                    self.addAndEditTaskView.taskTextField.text = ""
+                    self.loadAcviteTasks()
+                    self.tableView.reloadData()
+                }
             }
+        } else {
+            self.addAndEditTaskView.taskTextField.markAsError()
+            self.addAndEditTaskView.errorLabel.text = Localized.errorEmptyTextFieldMessage.string
         }
+        
     }
     
 }

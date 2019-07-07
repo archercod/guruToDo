@@ -133,7 +133,7 @@ extension DoneTasksViewController: UITableViewDataSource {
         checkMarkButton.frame = CGRect(x: 0, y: 0, width: 30, height: 30)
         checkMarkButton.addTarget(self, action: #selector(accessoryButtonTapped(sender:)), for: .touchUpInside)
         checkMarkButton.layer.borderWidth = 1.0
-        checkMarkButton.layer.borderColor = UIColor.blue.cgColor
+        checkMarkButton.layer.borderColor = UIColor.MainColors.Blue.cgColor
         checkMarkButton.setImage(UIImage(named: "doneTaskButton"), for: .normal)
         checkMarkButton.layer.masksToBounds = true
         checkMarkButton.contentMode = .scaleAspectFit
